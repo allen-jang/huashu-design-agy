@@ -80,6 +80,25 @@ npx skills add allen-jang/huashu-design-agy
      npx playwright install --with-deps
      ```
 
+### 🪟 윈도우 사용자 안내 (Windows Environment Tips)
+
+윈도우(Windows CMD 또는 PowerShell) 환경에서 본 스킬의 쉘 스크립트(`.sh` 파일)를 실행하거나 에이전트의 렌더링 툴체인을 매끄럽게 동작시키려면 다음 팁을 참고하세요.
+
+1. **Git Bash 또는 WSL 사용 권장**
+   * `scripts/` 폴더 내에 있는 애니메이션 변환(`convert-formats.sh`) 및 음악 합성(`add-music.sh`) 등의 쉘 스크립트는 **Git Bash** 혹은 **WSL (Windows Subsystem for Linux)** 터미널에서 실행하는 것을 강력히 권장합니다.
+2. **글로벌 환경 변수(NODE_PATH) 설정**
+   * 비디오 렌더링 시 글로벌 패키지를 참조해야 하는 경우, 유닉스 계열의 `NODE_PATH=$(npm root -g)` 대신 다음 명령어를 사용하세요.
+     * **PowerShell**:
+       ```powershell
+       $env:NODE_PATH = (npm root -g)
+       node scripts/render-video.js <html-file>
+       ```
+     * **CMD**:
+       ```cmd
+       for /f "tokens=*" %i in ('npm root -g') do set NODE_PATH=%i
+       node scripts/render-video.js <html-file>
+       ```
+
 ---
 
 ## 핵심 기능
