@@ -63,6 +63,23 @@ npx skills add allen-jang/huashu-design-agy
 
 별도의 그래픽 툴 플러그인이나 복잡한 설정이 필요하지 않습니다. 에이전트 친화적인 설계로 안티그라비티(Antigravity)를 지원하는 모든 AI 에이전트 환경에서 자연스럽게 작동합니다.
 
+### 🛠️ 사전 요구사항 (Prerequisites)
+
+이 스킬의 모든 기능(특히 애니메이션 비디오 렌더링, PPTX 변환 및 오디오 믹싱 등)을 오류 없이 정상적으로 실행하려면 로컬 시스템에 다음 의존성 도구들이 사전 설치되어 있어야 합니다.
+
+1. **Node.js** (v18 이상 권장)
+   * 스킬 패키지와 내부 렌더러 툴체인을 동작시키기 위한 필수 런타임 환경입니다.
+2. **FFmpeg**
+   * 애니메이션 녹화본(MP4) 생성, 60fps 보간 비디오 및 최종 GIF 인코딩, 오디오 믹싱 기능 등에 필수적입니다.
+   * **macOS (Homebrew)**: `brew install ffmpeg`
+   * **Windows (Chocolatey)**: `choco install ffmpeg`
+   * **Linux**: `sudo apt install ffmpeg`
+3. **Playwright 브라우저 및 의존성**
+   * HTML 애니메이션을 브라우저 가상 환경에서 렌더링하기 위해 Chromium 헤드리스 브라우저 드라이버가 필요합니다. 스킬이 설치된 프로젝트 경로에서 아래 명령을 실행하여 설치할 수 있습니다:
+     ```bash
+     npx playwright install --with-deps
+     ```
+
 ---
 
 ## 핵심 기능
