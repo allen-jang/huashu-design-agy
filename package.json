@@ -1,0 +1,26 @@
+{
+  "name": "huashu-design-agy",
+  "version": "1.0.0",
+  "description": "huashu-design skill ported for Antigravity, Korean translated",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/allen-jang/huashu-design-agy.git"
+  },
+  "keywords": [],
+  "author": "allen-jang",
+  "license": "MIT",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/allen-jang/huashu-design-agy/issues"
+  },
+  "homepage": "https://github.com/allen-jang/huashu-design-agy#readme",
+  "dependencies": {
+    "playwright": "^1.60.0",
+    "pptxgenjs": "^4.0.1",
+    "sharp": "^0.34.5"
+  }
+}
