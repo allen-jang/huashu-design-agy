@@ -210,8 +210,6 @@ Claude Design이 훌륭한 **그래픽 저작 도구**라면, `huashu-design`은
 huashu-design-agy/
 ├── SKILL.md                 # 안티그라비티가 읽고 실행하는 메인 지침 (한국어 번역/최적화)
 ├── README.md                # 한국어 README (본 파일)
-├── README.en.md             # 영문 README (Original English)
-├── README.zh.md             # 중문 README (Original Chinese)
 ├── assets/                  # 프로젝트 스타터 컴포넌트 라이브러리
 │   ├── animations.jsx       # Stage + Sprite + Easing + interpolate 프레임워크
 │   ├── ios_frame.jsx        # iPhone 15 Pro 디바이스 프레임
